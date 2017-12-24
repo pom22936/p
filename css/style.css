@@ -1,0 +1,56 @@
+div{
+    margin: auto;
+}
+label{
+    display: block;
+}
+#form_login{
+    padding: 5px;
+    margin-top: 50px;
+    color: whitesmoke;
+    width: 500px;
+    height: 300px;
+}
+#form_register{
+    padding: 5px;
+    margin-top: 50px;
+    color: whitesmoke;
+    width: 500px;
+    height: 400px;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ5dtoojlQEUfz35It-0ZxN93WBsc86yfZEyMHHpTbl95psPa8");
+    background-size: cover;
+}
+#jb-wh{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+#sh-foot{
+    width: 100%;
+    height: 600px;
+    background-color: rgba(148, 66, 66, 0.322);
+}
+#sh-drink{
+    width: 100%;
+    height: 600px;
+    background-color: rgba(228, 101, 27, 0.863);
+}
+#sh-sweets{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(91, 116, 3);
+}
+#set{
+    display: block;
+    margin: auto;
+    padding: 50px;
+}
+#img-pic{
+    width: 250px;
+    height: 250px;
+}
+
+
+
