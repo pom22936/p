@@ -1,3 +1,14 @@
-<p>
-  home works!
-</p>
+<table class='table'>
+  <thead>
+  <tr>
+  <td>Name</td>
+  <td>Description</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of datas">
+  <td>{{data.value.name}}</td>
+  <td>{{data.value.description}}</td>
+  </tr>
+  </tbody>
+  </table>
