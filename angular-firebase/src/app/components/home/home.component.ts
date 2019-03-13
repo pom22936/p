@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +8,27 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  dataList: AngularFireList<any>;
+  dataList: any;
   datas: any[];
 
-  constructor(db: AngularFireDatabase) {
-    this.dataList = db.list('datas');
+
+  constructor(private db: AngularFireDatabase,private router: Router) {
+
    }
 
   ngOnInit() {
-    this.dataList.snapshotChanges().map(action => {
-      return action.map(action => ({key : action.key , value : action.payload.val()}));
-    }).subscribe(items => {
-      this.datas = items;
+    this.dataList = this.db.list('datas');
+    this.dataList.snapshotChanges().subscribe(items => {
+      this.datas = items.map(items => ({key : items.key ,value : items.payload.val()}));
     });
+  }
+
+  delWiki(data) {
+    this.dataList.remove(data.key);
+  }
+
+  editWiki(data) {
+    this.router.navigate([`/editWiki/${data.key}`]);
   }
 
 }

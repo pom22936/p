@@ -31,6 +31,7 @@ export const router: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'crud', component: CRUDComponent },
+  {path: 'editWiki/:id', component: CRUDComponent},
   { path: 'profile', component: ProfileComponent }
 
 ]

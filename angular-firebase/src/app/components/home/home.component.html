@@ -3,12 +3,16 @@
   <tr>
   <td>Name</td>
   <td>Description</td>
+  <td>Action</td>
+  <td>Action</td>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let data of datas">
   <td>{{data.value.name}}</td>
   <td>{{data.value.description}}</td>
+  <td><button type="button" (click)="editWiki(data)" >Edit</button></td>
+  <td><button type="button" (click)="delWiki(data)" >Delete</button></td>
   </tr>
   </tbody>
   </table>
